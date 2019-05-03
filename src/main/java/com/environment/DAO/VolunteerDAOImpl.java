@@ -27,7 +27,7 @@ public class VolunteerDAOImpl implements VolunteerDAO{
 	@SuppressWarnings("unchecked")
 	public List<Volunteer> getAllVolunteer() {
 		session=sessionFactory.getCurrentSession();
-		List<Volunteer> volunteer=session.createQuery("From Volunteer").getResultList();
+		List<Volunteer> volunteer=session.createQuery("FROM Volunteer").getResultList();
 		return volunteer;
 	}
 

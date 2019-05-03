@@ -14,7 +14,7 @@
     <jsp:include page="../views/fragments/navbar.jsp" />
     
     <div align="center">
-        <span class="badge"><h3>Please Fill the Information</h3></span>
+        <span class="badge"><h3>Please Update the Information</h3></span>
     </div>
     <br>
 
@@ -27,35 +27,13 @@
 
             <form:hidden path="id" />
 
-            <spring:bind path="firstName">
+            <spring:bind path="vname">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <label class="col-sm-2 control-label">First Name</label>
+                    <label class="col-sm-2 control-label">Volunteer Name</label>
                     <div class="col-sm-6">
-                        <form:input path="firstName" type="text" class="form-control "
-                            id="firstName" placeholder="please enter your name" />
-                        <form:errors path="firstName" class="control-label" />
-                    </div>
-                </div>
-            </spring:bind>
-            
-            <spring:bind path="lastName">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <label class="col-sm-2 control-label">LastName</label>
-                    <div class="col-sm-4">
-                        <form:input path="lastName" class="form-control" id="lastName"
-                            placeholder="please enter your city" />
-                        <form:errors path="lastName" class="control-label" />
-                    </div>
-                </div>
-            </spring:bind>
-            
-            <spring:bind path="phone">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <label class="col-sm-2 control-label">Phone</label>
-                    <div class="col-sm-4">
-                        <form:input path="phone" class="form-control" id="phone"
-                            placeholder="please enter your state" />
-                        <form:errors path="phone" class="control-label" />
+                        <form:input path="vname" type="text" class="form-control "
+                            id="vname" placeholder="please enter your Name" />
+                        <form:errors path="vname" class="control-label" />
                     </div>
                 </div>
             </spring:bind>
@@ -70,6 +48,17 @@
                     </div>
                 </div>
             </spring:bind>
+            
+            <spring:bind path="email">
+                <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <label class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-4">
+                        <form:input path="email" class="form-control" id="state"
+                             placeholder="please enter your phone Email" />
+                        <form:errors path="email" class="control-label" />
+                    </div>
+                </div>
+            </spring:bind>
 
             <spring:bind path="city">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
@@ -81,24 +70,13 @@
                     </div>
                 </div>
             </spring:bind>
-            
-            <spring:bind path="state">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <label class="col-sm-2 control-label">State</label>
-                    <div class="col-sm-4">
-                        <form:input path="state" class="form-control" id="state"
-                             placeholder="please enter your phone number" />
-                        <form:errors path="state" class="control-label" />
-                    </div>
-                </div>
-            </spring:bind>
-            
+
             <spring:bind path="remark">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <label class="col-sm-2 control-label">Remark</label>
                     <div class="col-sm-10">
                         <form:textarea path="remark" rows="5"
-                            class="form-control" id="address" placeholder="please add your remarks if any" />
+                         	class="form-control" id="address" placeholder="please add your remarks"/>
                         <form:errors path="remark" class="control-label" />
                     </div>
                 </div>
@@ -132,8 +110,8 @@
 
   
     
-	<script type="text/javascript" src="webjars/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- 	<script type="text/javascript" src="webjars/jquery/1.11.1/jquery.min.js"></script> -->
+<!-- 	<script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     
     <%-- <jsp:include page="../views/fragments/footer.jsp" /> --%>
 </body>

@@ -27,35 +27,13 @@
 
             <form:hidden path="id" />
 
-            <spring:bind path="firstName">
+            <spring:bind path="vname">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <label class="col-sm-2 control-label">First Name</label>
+                    <label class="col-sm-2 control-label">Volunteer Name</label>
                     <div class="col-sm-6">
-                        <form:input path="firstName" type="text" class="form-control "
-                            id="firstName" placeholder="please enter your First Name" />
-                        <form:errors path="firstName" class="control-label" />
-                    </div>
-                </div>
-            </spring:bind>
-            
-            <spring:bind path="lastName">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <label class="col-sm-2 control-label">Last Name</label>
-                    <div class="col-sm-6">
-                        <form:input path="lastName" class="form-control" id="lastName"
-                            placeholder="please enter your Last Name" />
-                        <form:errors path="lastName" class="control-label" />
-                    </div>
-                </div>
-            </spring:bind>
-
-            <spring:bind path="phone">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <label class="col-sm-2 control-label">Phone</label>
-                    <div class="col-sm-4">
-                        <form:input path="phone" class="form-control" id="phone"
-                            placeholder="Please Enter your Phone Number" />
-                        <form:errors path="phone" class="control-label" />
+                        <form:input path="vname" type="text" class="form-control "
+                            id="firstName" placeholder="please enter your Name" />
+                        <form:errors path="vname" class="control-label" />
                     </div>
                 </div>
             </spring:bind>
@@ -64,9 +42,20 @@
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <label class="col-sm-2 control-label">Gender</label>
                     <div class="col-sm-4">
-                        <form:input path="gender" class="form-control" id="gender"
-                             placeholder="please enter your Gender" />
+                        <form:input path="gender" type="text" class="form-control" 
+                             id="gender" placeholder="please enter your Gender" />
                         <form:errors path="gender" class="control-label" />
+                    </div>
+                </div>
+            </spring:bind>
+            
+            <spring:bind path="email">
+                <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <label class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-4">
+                        <form:input path="email"
+                            class="form-control" id="eamil" placeholder="please enter your Email" />
+                        <form:errors path="city" class="control-label" />
                     </div>
                 </div>
             </spring:bind>
@@ -76,19 +65,8 @@
                     <label class="col-sm-2 control-label">City</label>
                     <div class="col-sm-4">
                         <form:input path="city"
-                            class="form-control" id="city" placeholder="please enter your City" />
+                            class="form-control" id="state" placeholder="please enter your City" />
                         <form:errors path="city" class="control-label" />
-                    </div>
-                </div>
-            </spring:bind>
-            
-            <spring:bind path="state">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <label class="col-sm-2 control-label">State</label>
-                    <div class="col-sm-4">
-                        <form:input path="state"
-                            class="form-control" id="state" placeholder="please enter your State" />
-                        <form:errors path="state" class="control-label" />
                     </div>
                 </div>
             </spring:bind>
@@ -134,6 +112,6 @@
   
     
     
-    <%-- <jsp:include page="../views/fragments/footer.jsp" /> --%>
+<%--     <jsp:include page="../views/fragments/footbar.jsp" /> --%>
 </body>
 </html>

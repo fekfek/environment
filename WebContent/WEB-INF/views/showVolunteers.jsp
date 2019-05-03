@@ -38,14 +38,12 @@
                 <tr>
                     <!-- <th>#ID</th> -->
                     <th>Id</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Phone</th>
+                    <th>Volunteer Name</th>
                     <th>Gender</th>
+                    <th>Email</th>
                     <th>City</th>
-                    <th>State</th>
                     <th>Remark</th>
-                    <th>Action</th>
+                    <th>Action</th>                  
                 </tr>
             </thead>
 
@@ -53,14 +51,13 @@
 
                 <tr>
                     <td>${volunteer.id}</td>
-                    <td>${volunteer.firstName}</td>
-                    <td>${volunteer.lastName}</td>
-                    <td>${volunteer.phone}</td>
+                    <td>${volunteer.vname}</td>
                     <td>${volunteer.gender}</td>
+                    <td>${volunteer.email}</td>
                     <td>${volunteer.city}</td>
-                    <td>${volunteer.state}</td>
                     <td>${volunteer.remark}</td>
-                    <td><spring:url value="/volunteer/${volunteer.id}" var="applicantUrl" />
+                    <td>
+                    	<spring:url value="/volunteer/${volunteer.id}" var="applicantUrl" />
                         <spring:url value="/volunteer/${volunteer.id}/delete" var="deleteUrl" />
                         <spring:url value="/volunteer/${volunteer.id}/update" var="updateUrl" />
                         <spring:url value="/volunteer/${volunteer.id}/remark" var="remarkUrl" />
