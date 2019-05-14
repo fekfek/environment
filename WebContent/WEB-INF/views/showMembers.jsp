@@ -7,16 +7,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>List of Volunteers</title>
+		<title>List of Members</title>
 	</head>
 	
 	<link rel='stylesheet' href='webjars/bootstrap/3.3.7/css/bootstrap.min.css'>
+	<script type="text/javascript" src="environment/WebContent/resources/deleteConfirm.js"></script>
 
 <body>
 <jsp:include page="../views/fragments/navbar.jsp" />
 
 <jsp:include page="../views/fragments/confirmDelete.jsp" />
-
 
 
     <div class="container">
@@ -32,7 +32,7 @@
             </div>
         </c:if>
         <div align="center">
-            <span   class="badge"> <h1> List of Volunteers </h1> </span> 
+            <span   class="badge"> <h1> List of Registered Members </h1> </span> 
         </div>
         <br>
 
@@ -41,36 +41,38 @@
                 <tr>
                     <!-- <th>#ID</th> -->
                     <th>Id</th>
-                    <th>Volunteer Name</th>
-                    <th>Gender</th>
+                    <th>Member Name</th>
+                    <th>Password</th>
                     <th>Email</th>
+                    <th>Phone</th>
                     <th>City</th>
-                    <th>Remark</th>
+                    <th>Membership Type</th>
+                    <th>Contribution/ Remark</th>
                     <th>Action</th>                  
                 </tr>
             </thead>
 
-             <c:forEach var="volunteer" items="${myVolunteers}">	
+             <c:forEach var="member" items="${members}">	
 
                 <tr>
-                    <td>${volunteer.id}</td>
-                    <td>${volunteer.vname}</td>
-                    <td>${volunteer.gender}</td>
-                    <td>${volunteer.email}</td>
-                    <td>${volunteer.city}</td>
-                    <td>${volunteer.remark}</td>
+                    <td>${member.id}</td>
+                    <td>${member.name}</td>
+                    <td>${member.password}</td>
+                    <td>${member.email}</td>
+                    <td>${member.phone}</td>
+                    <td>${member.city}</td>
+                    <td>${member.membershipType}</td>
+                    <td>${member.contributionRemark}</td>
                     <td>
-                    	<spring:url value="/volunteer/${volunteer.id}" var="applicantUrl" />
-                        <spring:url value="/volunteer/${volunteer.id}/delete" var="deleteUrl" />
-                        <spring:url value="/volunteer/${volunteer.id}/update" var="updateUrl" />
-                        <spring:url value="/volunteer/${volunteer.id}/remark" var="remarkUrl" />
+                        <spring:url value="${member.id}/update" var="updateUrl" />
+						<spring:url value="${member.id}/delete" var="deleteUrl" />
+                        <spring:url value="${member.id}/remark" var="remarkUrl" />
                         <button class="btn btn-primary"
                             onclick="location.href='${updateUrl}'" >Update</button>
                         <button class="btn btn-danger"
                             onclick="location.href='${deleteUrl}'" data-toggle="modal" data-target="#mymodal" >
-                            	<span class="glyphicon glyphicon-trash"></span> Delete</button>
-                        <button class="btn btn-info"
-                            onclick="#" >Remark</button> 
+                            	<span class="glyphicon glyphicon-trash"></span> Delete</button> 
+                        
                     </td>
                 </tr>
            </c:forEach>		
@@ -79,10 +81,10 @@
         
         	
         
-       <spring:url value="/newVolunteer" var="newVolunteer" /> 
+       <spring:url value="/newMember" var="newMember" /> 
                 
        <button class="btn btn-primary  btn-lg btn-block"
-                            onclick="location.href='${newVolunteer}'" >New Volunteer</button> 
+                            onclick="location.href='${newMember}'" >New Member</button> 
                             
       
       

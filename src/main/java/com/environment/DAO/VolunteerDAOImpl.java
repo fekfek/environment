@@ -50,6 +50,13 @@ public class VolunteerDAOImpl implements VolunteerDAO{
 		return volunteer;
 	}
 
+	@Override
+	public Volunteer getVolunteer(int id) {
+		session = sessionFactory.getCurrentSession();
+		Volunteer volunteer = session.get(Volunteer.class, id);
+		return volunteer;
+	}
+
 	/*@Override
 	public Volunteer updateVolunteer(int id) {
 		session=sessionFactory.getCurrentSession();

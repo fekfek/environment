@@ -14,4 +14,6 @@ public interface VolunteerDAO {
 	
 	public Volunteer updateVolunteer(int id);
 
+	public Volunteer getVolunteer(int id);
+
 }

@@ -13,6 +13,10 @@ public interface VolunteerService {
 	public void deleteVolunteer(int id);
 	
 	public Volunteer updateVolunteer(int id);
+
+	public Volunteer getVolunteer(int id);
+
+
 	
 //	public Volunteer getVolunteerId(int id);
 

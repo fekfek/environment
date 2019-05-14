@@ -19,8 +19,8 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 
-                <c:forEach var="applicant" items="${myApplicants}">
-                <spring:url value="/applicant/${applicant.id}/delete" var="deleteUrl" />
+                <c:forEach var="member" items="${members}">
+                <spring:url value="${member.id}/delete" var="deleteUrl" />
                 <button  class="btn btn-primary" onclick="location.href='${deleteUrl}'" >Delete</button>
            		 </c:forEach>	
             </div>

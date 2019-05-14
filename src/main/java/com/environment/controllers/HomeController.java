@@ -21,8 +21,8 @@ public class HomeController {
 		return mv;
 	}
 	@RequestMapping("/manager")
-	public ModelAndView manager() {
-		ModelAndView mv=new ModelAndView();
+	public ModelAndView manager(ModelAndView mv) {
+//		ModelAndView mv=new ModelAndView();
 		mv.addObject("message","This page is strictly for Managers only.");
 		mv.setViewName("manager");
 		return mv;

@@ -50,7 +50,7 @@
                 </tr>
             </thead>
 
-             <c:forEach var="volunteer" items="${myVolunteers}">	
+             <c:forEach var="volunteer" items="${volunteer}">	
 
                 <tr>
                     <td>${volunteer.id}</td>

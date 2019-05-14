@@ -11,12 +11,24 @@
 	
     
         <ul class="nav nav-pills" style="font-size:20px">	
-        
-        	
+            	
         	<li class="active"><a class="navbar-brand" href="${pageContext.request.contextPath}/">Home</a></li>
             
-            <li role="presentation"><a href="${pageContext.request.contextPath}/apply">Apply</a></li>
-	        <li role="presentation"><a href="${pageContext.request.contextPath}/showvolunteers">Show Volunteers</a></li>
+            <li role="presentation"><a href="${pageContext.request.contextPath}/newVolunteer">Register to volunteer</a></li>
+	        <li role="presentation"><a href="${pageContext.request.contextPath}/showvolunteers">Volunteers registered</a></li>
+			<li role="presentation"><a href="${pageContext.request.contextPath}/membership">Membership</a></li>
+			
+			<li role="presentation">
+			  <div  role="group">
+			    <a id="mydropdown"  class=" dropdown-toggle" data-toggle="dropdown" > M </a>
+			    
+			    <div class="dropdown-menu" aria-labelledby="mydropdown">
+			      <a class="dropdown-item" href="#">Sign Up</a><br>
+			      <a class="dropdown-item" href="#">Sign In</a>
+			    </div>
+			    </div>
+			</li>
+			
 			<li role="presentation"><a href="${pageContext.request.contextPath}/admin">Admin </a></li>	
 			<li role="presentation"><a href="${pageContext.request.contextPath}/manager">Manager </a></li>	     
 			<li>	
@@ -28,22 +40,24 @@
 				</form>		
 			</li>
 			
-			</ul>
+		</ul>
 			
-			<ul class=" nav nav-pills pull-right">
+		<ul class=" nav nav-pills pull-right">
 			
-        <li style=" font-size:30px; color:white"  class="text-muted">
-            Welcome : ${pageContext.request.userPrincipal.name} |  &#160
+        	<li style=" font-size:30px; color:white"  class="text-muted">
+            	Welcome : ${pageContext.request.userPrincipal.name} |  &#160
         
-        </li>
+        	</li>
         
-        <li style="color:red">
+       	 <li style="color:red">
 			<form action="${pageContext.request.contextPath}/logout" method="post">
 			<input type="submit" value ="Logout" style="height=35px">
 			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 			</form>
-       </li>
-        </ul>
+     	  </li>
+     	  
+       </ul>
+       
     </div>
     </nav>
     <br>

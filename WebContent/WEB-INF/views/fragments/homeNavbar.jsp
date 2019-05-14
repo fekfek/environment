@@ -6,15 +6,30 @@
     <div class="container-fluid">
     
     	<div class="navbar-header">	
-			<a class="navbar-brand" href="${pageContext.request.contextPath}/">
+    		<a class="navbar-brand" href="${pageContext.request.contextPath}/">
+<!-- or		<a class="navbar-brand" href="/environment/"> -->
 				<h1>Environment &#160&#160&#160&#160&#160</h1>
 			</a> 
 		</div>
 
 		<ul class="nav nav-pills" style="font-size:20px">	
         	<li class="active"><a class="navbar-brand" href="${pageContext.request.contextPath}/">Home</a></li>
-            <li role="presentation"><a href="${pageContext.request.contextPath}/apply">Apply</a></li>
-	        <li role="presentation"><a href="${pageContext.request.contextPath}/showvolunteers">Show Volunteers</a></li>
+            <li role="presentation"><a href="${pageContext.request.contextPath}/newVolunteer">Register to Volunteer</a></li>
+	        <li role="presentation"><a href="${pageContext.request.contextPath}/showvolunteers">Volunteers Registered</a></li>
+	    	<li role="presentation"><a href="${pageContext.request.contextPath}/membership">Membership</a></li>
+<!-- or	    <li role="presentation"><a href="/environment/membership">Membership</a></li> -->
+			
+			<li role="presentation">
+			  <div  role="group">
+			    <a id="mydropdown"  class=" dropdown-toggle" data-toggle="dropdown" > M </a>
+			    
+			    <div class="dropdown-menu" aria-labelledby="mydropdown">
+			      <a class="dropdown-item" href="#">Sign Up</a><br>
+			      <a class="dropdown-item" href="#">Sign In</a>
+			    </div>
+			    </div>
+			</li>
+			
 			<li role="presentation"><a href="${pageContext.request.contextPath}/admin">Admin </a></li>	
 			<li role="presentation"><a href="${pageContext.request.contextPath}/manager">Manager </a></li>	     
 			<li>	
@@ -28,8 +43,9 @@
 		</ul>
 			
 		<ul class=" nav nav-pills pull-right">
-			<li style=" font-size:30px; color:white"  class="text-muted"> Welcome
-            	<%-- : ${pageContext.request.userPrincipal.name}  |  &#160
+			<li style=" font-size:30px; color:white"  class="text-muted"> 
+				Welcome
+    <%-- 			: ${pageContext.request.userPrincipal.name}  |  &#160
 			</li>
         
         	<li style="color:red">
@@ -37,8 +53,8 @@
 				<input type="submit" value ="Logout" style="height=35px">
 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 				</form>
-			--%>
-        </li>
+	--%>
+       		</li>
         </ul>
     </div>
     </nav>

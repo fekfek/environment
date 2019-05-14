@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,7 +23,7 @@ public class VolunteerController {
 	private VolunteerService volunteerService;
 	
 	//shows the form to fill info about volunteer
-	@RequestMapping(value="/apply", method=RequestMethod.GET)
+	@RequestMapping(value="/newVolunteer", method=RequestMethod.GET)
 		public String volunteer(Model md) {
 			md.addAttribute("anyname", new Volunteer() );
 			return "newVolunteer";
@@ -36,7 +37,8 @@ public class VolunteerController {
         } else {
 
         	volunteerService.createVolunteer(volunteer);
-            return "redirect:/showvolunteers";	
+        	return "redirect:/showVolunteer";
+//         return "redirect:/showvolunteers";	
         }
 
     }
@@ -50,6 +52,17 @@ public class VolunteerController {
         
         return "showVolunteers";	
     }
+	
+	///////////////////
+	//to show a single volunteer for confirmation after registration 
+	@GetMapping("/showVolunteer")
+	public String showVolunteer(Model model) {
+//		Volunteer volunteer = volunteerService.getVolunteer(id);
+//		model.addAttribute("volunteer", volunteer);
+		return "registered";
+	}
+	
+	/////////////////
 	//to remove an applicant
 	@RequestMapping(value = "/volunteer/{volunteer.id}/delete")	
     public String doDelete(@PathVariable("volunteer.id") int id) {
@@ -64,6 +77,8 @@ public class VolunteerController {
 		model.addAttribute("updateMe",volunteerService.updateVolunteer(id));
 		return "updateVolunteer";
 	}
+	
+	
 
 
 }

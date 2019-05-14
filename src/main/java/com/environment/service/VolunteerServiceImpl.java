@@ -44,6 +44,12 @@ public class VolunteerServiceImpl implements VolunteerService{
 
 	}
 
+	@Override
+	public Volunteer getVolunteer(int id) {
+		Volunteer volunteer = volunteerDAO.getVolunteer(id);
+		return volunteer;
+	}
+
 	/*@Override
 	@Transactional
 	public Volunteer getVolunteerId(int id) {

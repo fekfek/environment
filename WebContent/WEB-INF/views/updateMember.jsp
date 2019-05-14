@@ -9,7 +9,7 @@
 <html lang="en">
 
 <head>
-<title>Register to Volunteer</title>
+<title>Register for Membership</title>
 </head>
 
 <link rel='stylesheet'
@@ -19,37 +19,26 @@
 	<jsp:include page="../views/fragments/navbar.jsp" />
 
 	<div align="center">
-		<span class="badge"><h3>Please Fill the Information</h3></span>
+		<span class="badge"><h3>Please Fill Member Details to Register</h3></span>
 	</div>
 	<br>
 
 	<div class="container">
 
-		<spring:url value="/submitvolunteer/" var="submitVolunteerUrl" />
+		<spring:url value="/registerMember/" var="registerMember" />
 
 		<form:form class="form-horizontal" method="post"
-			modelAttribute="anyname" action="${submitVolunteerUrl}">
+			modelAttribute="updateMember" action="${registerMember}">
 
 			<form:hidden path="id" />
 
-			<spring:bind path="vname">
+			<spring:bind path="name">
 				<div class="form-group ${status.error ? 'has-error' : ''}">
-					<label class="col-sm-2 control-label">Volunteer Name</label>
+					<label class="col-sm-2 control-label">Member Name</label>
 					<div class="col-sm-6">
-						<form:input path="vname" type="text" class="form-control "
-							id="vname" placeholder="please enter your Name" />
-						<form:errors path="vname" class="control-label" />
-					</div>
-				</div>
-			</spring:bind>
-
-			<spring:bind path="gender">
-				<div class="form-group ${status.error ? 'has-error' : ''}">
-					<label class="col-sm-2 control-label">Gender</label>
-					<div class="col-sm-4">
-						<form:input path="gender" type="text" class="form-control"
-							id="gender" placeholder="please enter your Gender" />
-						<form:errors path="gender" class="control-label" />
+						<form:input path="name" type="text" class="form-control "
+							id="name" placeholder="please enter your Name" />
+						<form:errors path="name" class="control-label" />
 					</div>
 				</div>
 			</spring:bind>
@@ -64,6 +53,28 @@
 					</div>
 				</div>
 			</spring:bind>
+			
+			<spring:bind path="password">
+				<div class="form-group ${status.error ? 'has-error' : ''}">
+					<label class="col-sm-2 control-label">Password</label>
+					<div class="col-sm-4">
+						<form:input path="password" type="password" class="form-control"
+							id="password" placeholder="Please enter a secured password" />
+						<form:errors path="password" class="control-label" />
+					</div>
+				</div>
+			</spring:bind>
+			
+			<spring:bind path="phone">
+				<div class="form-group ${status.error ? 'has-error' : ''}">
+					<label class="col-sm-2 control-label">Phone</label>
+					<div class="col-sm-4">
+						<form:input path="phone" class="form-control" id="phone"
+							placeholder="please enter your phone" />
+						<form:errors path="phone" class="control-label" />
+					</div>
+				</div>
+			</spring:bind>
 
 			<spring:bind path="city">
 				<div class="form-group ${status.error ? 'has-error' : ''}">
@@ -75,14 +86,25 @@
 					</div>
 				</div>
 			</spring:bind>
+			
+			<spring:bind path="membershipType">
+				<div class="form-group ${status.error ? 'has-error' : ''}">
+					<label class="col-sm-2 control-label">Membership Type</label>
+					<div class="col-sm-4">
+						<form:input path="membershipType" class="form-control" id="membershipType"
+							placeholder="Gold, Platinum, Diamond, Life Time" />
+						<form:errors path="membershipType" class="control-label" />
+					</div>
+				</div>
+			</spring:bind>
 
-			<spring:bind path="remark">
+			<spring:bind path="contributionRemark">
 				<div class="form-group ${status.error ? 'has-error' : ''}">
 					<label class="col-sm-2 control-label">Remark</label>
 					<div class="col-sm-10">
-						<form:textarea path="remark" rows="5" class="form-control"
-							id="address" placeholder="please add your remarks if any" />
-						<form:errors path="remark" class="control-label" />
+						<form:textarea path="ContributionRemark" rows="5" class="form-control"
+							id="ContributionRemark" placeholder="please add your remarks if any" />
+						<form:errors path="ContributionRemark" class="control-label" />
 						<!-- rows="5"  reserves 5 rows for the field -->
 					</div>
 				</div>
@@ -100,9 +122,9 @@
 			</div>
 		</form:form>
 
-		<spring:url value="/volunteer" var="volunteer" />
+		<spring:url value="/newMember" var="newMember" />
 		<form:form class="form-horizontal" method="get"
-			modelAttribute="anyname" action="${volunteer}">
+			modelAttribute="newMember" action="${newMember}">
 
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
