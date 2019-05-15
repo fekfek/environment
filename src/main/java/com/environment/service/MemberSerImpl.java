@@ -48,4 +48,9 @@ public class MemberSerImpl implements MemberService {
 		
 	}
 
+	@Override
+	public Member getMember(int id) {
+		return memberdao.getMember(id);
+	}
+
 }

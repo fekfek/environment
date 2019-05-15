@@ -28,9 +28,7 @@ public class MemberDapImpl implements MemberDao {
 	@Override
 	public List<Member> showMembers() {
 		session = sf.getCurrentSession();
-		 
 		List<Member> members = session.createQuery("from Member",Member.class).getResultList();
-		
 		return members;
 	}
 
@@ -68,6 +66,13 @@ public class MemberDapImpl implements MemberDao {
 		if(member !=null)
 			session.remove(member);
 		
+	}
+
+	@Override
+	public Member getMember(int id) {
+		session = sf.getCurrentSession();
+		Member member = session.get(Member.class, id);
+		return member;
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.environment.config;
+/*package com.environment.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -24,7 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
         http.authorizeRequests()
        .antMatchers("/", "/home").permitAll()	//requests accessed by all
-//     .antMatchers("/apply","/**/update","/**/delete").hasAnyRole("USER")	//accessed by USER and those
+//     .antMatchers("/apply","/*update","delete").hasAnyRole("USER")	//accessed by USER and those
        .antMatchers("/showvolunteers").hasAnyRole("USER")					//having user role:Admin & Manager
        .antMatchers("/admin").access("hasRole('ADMIN') and hasRole('USER')")
        .antMatchers("/manager").access("hasRole('ADMIN') and hasRole('MANAGER') and hasRole('USER')")
@@ -36,3 +36,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 
 }
+*/

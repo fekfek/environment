@@ -66,7 +66,7 @@ public class MemberController {
 	
 	@GetMapping("{id}/update")
 	public String update(Model model,@PathVariable int id) {
-		Member member = service.update(id);
+		Member member = service.getMember(id);
 		model.addAttribute("updateMember", member);
 		return "updateMember";
 	}

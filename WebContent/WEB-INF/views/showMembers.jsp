@@ -70,9 +70,9 @@
                         <button class="btn btn-primary"
                             onclick="location.href='${updateUrl}'" >Update</button>
                         <button class="btn btn-danger"
-                            onclick="location.href='${deleteUrl}'" data-toggle="modal" data-target="#mymodal" >
+                            onclick="location.href='${deleteUrl}'"  >
                             	<span class="glyphicon glyphicon-trash"></span> Delete</button> 
-                        
+    <!--   insert this after onclick= 	data-toggle="modal" data-target="#mymodal" -->
                     </td>
                 </tr>
            </c:forEach>		

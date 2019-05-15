@@ -16,4 +16,6 @@ public interface MemberDao {
 
 	public void delete(int id);
 
+	public Member getMember(int id);
+
 }
