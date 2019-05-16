@@ -2,9 +2,14 @@ package com.environment.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,9 +38,15 @@ public class MemberController {
 		}
 	
 	@PostMapping("/registerMember")
-	public String registered(Member member, Model model) {
-		service.addMember(member);
-		return "redirect:/showMembers";
+	public String registered(@Validated Member member, BindingResult result) {
+		if(result.hasErrors()) {
+			return "redirect:/newMember";
+		}
+		else {
+			service.addMember(member);
+			return "redirect:/showMembers";
+		}
+		
 	}
 	
 	@GetMapping("/showMembers")

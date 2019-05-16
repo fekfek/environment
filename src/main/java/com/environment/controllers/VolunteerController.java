@@ -30,26 +30,18 @@ public class VolunteerController {
 	}
 	//to submit the filled info about applicant 
 	@RequestMapping(value = "/submitvolunteer", method = RequestMethod.POST)
-    public String doApply(Model model, @Validated Volunteer volunteer, BindingResult result) {
-
-        if (result.hasErrors()) {
-            return "newVolunteer";	
-        } else {
-
-        	volunteerService.createVolunteer(volunteer);
+    public String doApply(Model model, Volunteer volunteer) {
+            volunteerService.createVolunteer(volunteer);
         	return "redirect:/showVolunteer";
 //         return "redirect:/showvolunteers";	
-        }
+ 
 
     }
 	//to show all applications
 	@RequestMapping(value = "/showvolunteers", method = RequestMethod.GET)	
-    public String showVolunteers(Model model) {
-        
+    public String showVolunteers(Model model) {        
         List<Volunteer> volunteer = volunteerService.getAllVolunteer();
-        
         model.addAttribute("myVolunteers", volunteer );
-        
         return "showVolunteers";	
     }
 	
@@ -60,9 +52,9 @@ public class VolunteerController {
 //		Volunteer volunteer = volunteerService.getVolunteer(id);
 //		model.addAttribute("volunteer", volunteer);
 		return "registered";
-	}
-	
+	}	
 	/////////////////
+	
 	//to remove an applicant
 	@RequestMapping(value = "/volunteer/{volunteer.id}/delete")	
     public String doDelete(@PathVariable("volunteer.id") int id) {
