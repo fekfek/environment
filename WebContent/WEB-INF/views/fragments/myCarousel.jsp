@@ -11,44 +11,104 @@
 		<li data-target="#myCarousel" data-slide-to="6"></li>
 		<li data-target="#myCarousel" data-slide-to="7"></li>
 		<li data-target="#myCarousel" data-slide-to="8"></li>
+		<li data-target="#myCarousel" data-slide-to="9"></li>
+		<li data-target="#myCarousel" data-slide-to="10"></li>
+		<li data-target="#myCarousel" data-slide-to="11"></li>
+		<li data-target="#myCarousel" data-slide-to="12"></li>
 
 	</ul>
 	<div class="carousel-inner">
 		<div class="item active ">
-			<img src="resources/images/env-1.JPG"
-				class="img-fluid img-responsive" alt="my pic" width="100%">
+			<img src="resources/images/env1.JPG"
+				class="img-fluid img-responsive"  width="100%">
+				<div class="carousel-caption">
+      				<h3><font color="yellow">Informal Environmental Education</font></h3>
+    			</div>
 		</div>
 		<div class="item">
-			<img class="img-fluid img-responsive" alt="my pic"
-				src="resources/images/env-2.JPG">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env2.JPG">
+				<div class="carousel-caption">
+      				<h1><font color="red">Seedling Nursery Work</font></h1>
+    			</div>
 		</div>
 		<div class="item">
 			<img class="img-fluid img-responsive"
-				src="resources/images/env-3.JPG">
+				src="resources/images/env3.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="darkred">Seedling Nursery Work</font></h3>
+    			</div>
 		</div>
 		<div class="item">
-			<img class="img-fluid img-responsive" alt="My Pic"
-				src="resources/images/env-4.JPG">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env4.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="yellow">Seedling Nursery Work</font></h3>
+    			</div>
 		</div>
 		<div class="item">
-			<img class="img-fluid img-responsive" alt="My Pic"
-				src="resources/images/env-5.JPG">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env5.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="yellow">Seedling Transportation</font></h3>
+    			</div>
 		</div>
 		<div class="item">
-			<img class="img-fluid img-responsive" alt="My Pic"
-				src="resources/images/env-6.JPG">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env6.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="yellow">Tree Seedling Plantation</font></h3>
+    			</div>
 		</div>
 		<div class="item">
-			<img class="img-fluid img-responsive" alt="My Pic"
-				src="resources/images/env-7.JPG">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env7.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="yellow">Community Plantation</font></h3>
+    			</div>
 		</div>
 		<div class="item">
-			<img class="img-fluid img-responsive" alt="My Pic"
-				src="resources/images/env-8.JPG">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env8.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="red">World Environment Day Celebration</font></h3>
+    			</div>
 		</div>
 		<div class="item">
-			<img class="img-fluid img-responsive" alt="My Pic"
-				src="resources/images/env-9.JPG">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env9.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="red">Gabion Construction, Soil Conservation</font></h3>
+    			</div>
+		</div>
+		
+		<div class="item">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env10.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="red">Gabion Construction, Soil Conservation</font></h3>
+    			</div>
+		</div>
+		<div class="item">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env11.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="yellow">Fuel Saving Stoves to be distributed to the community</font></h3>
+    			</div>
+		</div>
+		<div class="item">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env12.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="yellow">Fuel Saving Stoves to be distributed to the community</font></h3>
+    			</div>
+		</div>
+		<div class="item">
+			<img class="img-fluid img-responsive" "
+				src="resources/images/env13.JPG">
+				<div class="carousel-caption">
+      				<h3><font color="yellow">SEE General Manager, Mr Gedi Gohe</font></h3>
+    			</div>
 		</div>
 
 	</div>

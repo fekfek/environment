@@ -12,11 +12,10 @@
 <title>Register for Membership</title>
 </head>
 
-<link rel='stylesheet'
-	href='webjars/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' 	href='webjars/bootstrap/3.3.7/css/bootstrap.min.css'>
 
 <body>
-	<jsp:include page="../views/fragments/navbar.jsp" />
+	<jsp:include page="../views/fragments/homeNavbar.jsp" />
 
 	<div align="center">
 		<span class="badge"><h3>Please Enter Email and Password</h3></span>

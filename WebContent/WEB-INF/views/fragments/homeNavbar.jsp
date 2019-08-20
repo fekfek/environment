@@ -7,31 +7,35 @@
     
     	<div class="navbar-header">	
     		<a class="navbar-brand" href="${pageContext.request.contextPath}/">
-<!-- or		<a class="navbar-brand" href="/environment/"> -->
-				<h1>Environment &#160&#160&#160&#160&#160</h1>
+<!-- or		<a class="navbar-brand" href="/see/"> -->
+				<h1>Save the Environment Ethiopia</h1>
 			</a> 
 		</div>
 
 		<ul class="nav nav-pills" style="font-size:20px">	
+			
         	<li class="active"><a class="navbar-brand" href="${pageContext.request.contextPath}/">Home</a></li>
-            <li role="presentation"><a href="${pageContext.request.contextPath}/newVolunteer">Register to Volunteer</a></li>
-	        <li role="presentation"><a href="${pageContext.request.contextPath}/showvolunteers">Volunteers Registered</a></li>
-	    	<li role="presentation"><a href="${pageContext.request.contextPath}/membership">Membership</a></li>
-<!-- or	    <li role="presentation"><a href="/environment/membership">Membership</a></li> -->
-			
-			<li role="presentation">
-			  <div  role="group">
-			    <a id="mydropdown"  class=" dropdown-toggle" data-toggle="dropdown" > M </a>
-			    
-			    <div class="dropdown-menu" aria-labelledby="mydropdown">
-			      <a class="dropdown-item" href="#">Sign Up</a><br>
-			      <a class="dropdown-item" href="#">Sign In</a>
-			    </div>
-			    </div>
-			</li>
-			
-			<li role="presentation"><a href="${pageContext.request.contextPath}/admin">Admin </a></li>	
-			<li role="presentation"><a href="${pageContext.request.contextPath}/manager">Manager </a></li>	     
+        	
+				<!-- or	    <li role="presentation"><a href="/see/</a></li> -->
+          
+           <li>
+			<div class="btn-group">
+  				<button class="btn btn-primary btn-lg dropdown-toggle" type="button" 
+  					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Membership
+  					<span class="caret"></span>
+  				</button>
+  				<ul class="dropdown-menu">
+  			  		<li><a class="dropdown-item" href="/see/signin">Member: Sign In</a></li>
+    				<li><a class="dropdown-item" href="/see/signup">New Member: Sign Up</a></li>
+  				</ul>
+			</div>
+          </li>
+          
+          
+            
+            <li role="presentation"><a href="${pageContext.request.contextPath}/contribute">Contribute</a></li>
+	        <li role="presentation"><a href="${pageContext.request.contextPath}/contact">Contact Us</a></li>
+	        <li role="presentation"><a href="${pageContext.request.contextPath}/seemanager">Managers</a></li>
 			<li>	
 				<form class="navbar-form" action="#">
 					<div class="form-group">

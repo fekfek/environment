@@ -142,7 +142,7 @@
 				</div>
 				<!-- end of 2nd row 3rd column -->
 
-				<hr class="hr-line" />		<!-- line dividing 2nd row and 3rd row in 1st column -->
+				<hr class="hr-line" />		<!-- line dividing 2nd row and 3rd row in 3rd column -->
 				
 
 				<div class="row">	<!-- 3rd row in 3rd column -->

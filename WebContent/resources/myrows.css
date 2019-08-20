@@ -1,6 +1,6 @@
 @charset "ISO-8859-1";
 
-.myrows1{
+#.myrows1{
 	margin:5px;
 	min-height:100px;
 	text-align:left;
@@ -23,12 +23,14 @@
   object-fit: cover;
   overflow: hidden;
 }
+
 .hr-line{
 	
 	height:3px;
 	color:#333;
 	background-color:#333;
 }
+
 .footrow{
  	position: fixed;
 	height:60px;
@@ -49,5 +51,18 @@
 .carousel-inner > .item > img {
   width:600px;
   height:470px;
+}
+
+.container{
+	padding-right: 15px;
+ 	padding-left: 15px;
+	margin-right: 0px;
+ 	margin-left: 0px;
+}
+h4{
+	color:blue;
+}
+h5{
+	margin-left:40px;
 }
 
