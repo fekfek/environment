@@ -12,7 +12,7 @@ public class HomeController {
 	@RequestMapping(value = {"/","/home"}, method = RequestMethod.GET)
 	public String hello(Model model) {
 		model.addAttribute("msg", "Welcome to ENVIRONMENT Home Page");
-		return "home2";
+		return "index";
 	}
 	@RequestMapping("/admin")
 	public ModelAndView admin() {
