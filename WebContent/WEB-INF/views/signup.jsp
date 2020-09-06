@@ -17,16 +17,18 @@
 <body>
 	<jsp:include page="../views/fragments/homeNavbar.jsp" />
 
+	<br>
 	<div align="center">
-		<span class="badge"><h3>Please Enter Email and Password</h3></span>
+		<span class="badge"><h3>Please Enter Your Information for Membership</h3></span>
 	</div>
 	<br><br><br>
 
 	<div class="container">
 
-		<spring:url value="/verify" var="verify" />
+		<spring:url value="/registerMember" var="registerMember" />
 
-		<form:form class="form-horizontal"  action="${verify}" method="post">
+		<form:form class="form-horizontal"   method="post"
+			modelAttribute="newMember"   action="${registerMember}">
 		
 			<div class="form-group">
 				<label class="col-sm-2 control-label">Name</label>
@@ -38,7 +40,8 @@
 			<div class="form-group">
 				<label class="col-sm-2 control-label">Email</label>
 				<div class="col-sm-4">
-				<input type="text" class="form-control" id="email" name="email">
+				<input type="text" class="form-control" id="email" name="email" 
+					placeholder="This will be your User Name when you sign in">
 				</div>
 			</div>	
 	
@@ -52,35 +55,21 @@
 			<div class="form-group">
 				<label class="col-sm-2 control-label">Phone</label>
 				<div class="col-sm-4">
-				<input type="text" class="form-control" id="phone" name="phone">
+				<input type="text" class="form-control" id="phone" name="phone" placeholder="Optional">
 				</div>
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label">Membership Type</label>
+				<label class="col-sm-2 control-label">Country/ City</label>
 				<div class="col-sm-4">
-				<select id="memtype" name="memtype" class="form-control">
-			      <option value="ethiopia">Gold</option>
-			      <option value="africa">Silver</option>
-			      <option value="europe">Life Time</option>
-    			</select>
+				<input type="text" class="form-control" id="city" name="city">
 				</div>
-
-			</div>	
-			
-			<div class="form-group">
-				<label class="col-sm-2 control-label">Remark</label>
-				<div class="col-sm-8">
-				<textarea class="form-control" id="remark" name="remark" style="height:100px;">
-				</textarea>
-				
-				</div>
-			</div>	
+			</div>		
 
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 
-					<button type="submit" class="btn-lg btn-primary pull-left">Sign In</button>
+					<button type="submit" class="btn-lg btn-primary pull-left">Sign Up</button>
 					
 				</div>
 			</div>

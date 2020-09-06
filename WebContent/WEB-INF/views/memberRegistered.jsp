@@ -13,16 +13,20 @@
 	<link rel='stylesheet' href='webjars/bootstrap/3.3.7/css/bootstrap.min.css'>
 
 <body>
-<jsp:include page="../views/fragments/navbar.jsp" />
+<jsp:include page="../views/fragments/homeNavbar.jsp" />
 
 <jsp:include page="../views/fragments/confirmDelete.jsp" />
 
+	<div class="container">
 
 
-    		<h1>Congradulations</h1>
-		<h2>You have been successfully registered. As a member you will be entitled to Member's
+    	<h1>Confirmation of Registration</h1>
+		<br>
+		<h3>You have been successfully registered. As a member you will be entitled to Member's
 		benefits and responsibilities. Thanks for being a member.
-		</h2>
+		</h3>
+
+	</div>
 
 	<script type="text/javascript" src="webjars/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>

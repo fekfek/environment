@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="environment/WebContent/resources/deleteConfirm.js"></script>
 
 <body>
-<jsp:include page="../views/fragments/navbar.jsp" />
+<jsp:include page="../views/fragments/mgmtNavbar.jsp" />
 
 <jsp:include page="../views/fragments/confirmDelete.jsp" />
 
@@ -28,7 +28,7 @@
                     aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <strong>${msg}</strong>
+                 <strong>${msg}</strong>
             </div>
         </c:if>
         <div align="center">
@@ -41,13 +41,11 @@
                 <tr>
                     <!-- <th>#ID</th> -->
                     <th>Id</th>
-                    <th>Member Name</th>
-                    <th>Password</th>
+                    <th>Name</th>
                     <th>Email</th>
+                    <th>Password</th>
                     <th>Phone</th>
-                    <th>City</th>
-                    <th>Membership Type</th>
-                    <th>Contribution/ Remark</th>
+                    <th>Country/ City</th>
                     <th>Action</th>                  
                 </tr>
             </thead>
@@ -57,12 +55,10 @@
                 <tr>
                     <td>${member.id}</td>
                     <td>${member.name}</td>
-                    <td>${member.password}</td>
                     <td>${member.email}</td>
+                    <td>${member.password}</td>
                     <td>${member.phone}</td>
                     <td>${member.city}</td>
-                    <td>${member.membershipType}</td>
-                    <td>${member.contributionRemark}</td>
                     <td>
                         <spring:url value="${member.id}/update" var="updateUrl" />
 						<spring:url value="${member.id}/delete" var="deleteUrl" />
@@ -81,10 +77,10 @@
         
         	
         
-       <spring:url value="/newMember" var="newMember" /> 
+       <spring:url value="/signup" var="signup" /> 
                 
        <button class="btn btn-primary  btn-lg btn-block"
-                            onclick="location.href='${newMember}'" >New Member</button> 
+                            onclick="location.href='${signup}'" >Add New Member</button> 
                             
       
       

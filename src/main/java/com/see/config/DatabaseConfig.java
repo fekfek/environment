@@ -21,10 +21,10 @@ public class DatabaseConfig {
 	public DataSource getDataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/volunteerdb?useUnicode=true&useJDBCCompliant"
+		dataSource.setUrl("jdbc:mysql://localhost:3306/see?useUnicode=true&useJDBCCompliant"
 	    		   				+ "TimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
 		dataSource.setUsername("root");
-		dataSource.setPassword("FryeKonjo");
+		dataSource.setPassword("muare");
 	       return dataSource;
 	   }
 	    
@@ -34,7 +34,7 @@ public class DatabaseConfig {
 
 	       LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 
-	       sessionBuilder.scanPackages("com.environment.model");
+	       sessionBuilder.scanPackages("com.see.model");
 	       sessionBuilder.addProperties(getHibernateProperties());
 
 	       return sessionBuilder.buildSessionFactory();
@@ -44,7 +44,7 @@ public class DatabaseConfig {
 	       Properties properties = new Properties();
 	       properties.put("hibernate.show_sql", "true");
 	       properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
-//	       properties.put("hbm2ddl.auto", "create");	
+	       properties.put("hbm2ddl.auto", "update");	
 	       return properties;
 	   }
 

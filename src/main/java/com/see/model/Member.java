@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -11,7 +12,8 @@ import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
+@Entity 
+@Table(name="members")
 @Setter @Getter
 public class Member {
 	@Id
@@ -27,8 +29,6 @@ public class Member {
 	private String password;
 	private String phone;
 	private String city;
-	private String membershipType;
-	private String contributionRemark;
 	
 		
 

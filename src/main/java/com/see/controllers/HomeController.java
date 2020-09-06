@@ -10,17 +10,16 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController {
 	
 	@RequestMapping(value = {"/","/home"}, method = RequestMethod.GET)
-	public String hello(Model model) {
-		model.addAttribute("msg", "Welcome to ENVIRONMENT Home Page");
-		return "index";
+	public String hello() {
+		return "home";
 	}
-	@RequestMapping("/admin")
+	@RequestMapping("/admin")		//controller not in use for now
 	public ModelAndView admin() {
 		ModelAndView mv=new ModelAndView();
 		mv.addObject("message","This page is for Admins but can be accessed by Managers");
 		return mv;
 	}
-	@RequestMapping("/manager")
+	@RequestMapping("/manager")		//controller not in use for now
 	public ModelAndView manager(ModelAndView mv) {
 //		ModelAndView mv=new ModelAndView();
 		mv.addObject("message","This page is strictly for Managers only.");

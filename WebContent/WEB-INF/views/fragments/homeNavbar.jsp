@@ -25,17 +25,17 @@
   					<span class="caret"></span>
   				</button>
   				<ul class="dropdown-menu">
-  			  		<li><a class="dropdown-item" href="/see/signin">Member: Sign In</a></li>
-    				<li><a class="dropdown-item" href="/see/signup">New Member: Sign Up</a></li>
+  			  		<li><a class="btn btn-info dropdown-item" href="/see/signin">Member: Sign In</a></li>
+    				<li><a class="btn btn-info dropdown-item" href="/see/signup">New Member: Sign Up</a></li>
   				</ul>
 			</div>
           </li>
           
           
-            
+            <li role="presentation"><a href="${pageContext.request.contextPath}/organization">Organization</a></li>
             <li role="presentation"><a href="${pageContext.request.contextPath}/contribute">Contribute</a></li>
 	        <li role="presentation"><a href="${pageContext.request.contextPath}/contact">Contact Us</a></li>
-	        <li role="presentation"><a href="${pageContext.request.contextPath}/seemanager">Managers</a></li>
+<%-- 	        <li role="presentation"><a href="${pageContext.request.contextPath}/seemanager">Managers</a></li> --%>
 			<li>	
 				<form class="navbar-form" action="#">
 					<div class="form-group">

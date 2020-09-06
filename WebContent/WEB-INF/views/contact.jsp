@@ -64,25 +64,30 @@ input[type=submit]:hover {
 <div class="col-md-8">
 
 <h4 align="center">Contact SEE using Contact Form</h4>
-  <form action="action_page.php">
 
-    <label for="fname">Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="your name..">
+  <form action="registerContact" method="post">
 
-    <label for="lname">Email and/or Phone</label>
-    <input type="text" id="lname" name="lastname" placeholder="your email / phone..">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="your name here ">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="your email here ">
+    
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" name="phone" placeholder=" Optional ">
 
     <label for="region">Region</label>
     <select id="region" name="region">
       <option value="ethiopia">Ethiopia</option>
       <option value="africa">Africa</option>
       <option value="europe">Europe</option>
+      <option value="asia">Asia</option>
       <option value="europe">North America</option>
       <option value="europe">South America</option>
     </select>
 
     <label for="comment">Comment/ Feedback</label>
-    <textarea id="comment" name="comment" placeholder="your comments.." style="height:150px">
+    <textarea id="comment" name="comment" placeholder="your comments" style="height:150px">
     </textarea>
 
     <input type="submit" value="Submit">

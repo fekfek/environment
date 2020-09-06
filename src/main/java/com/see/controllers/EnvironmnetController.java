@@ -1,7 +1,13 @@
 package com.see.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.see.model.Contact;
+import com.see.model.Member;
 
 @Controller
 public class EnvironmnetController {
@@ -74,26 +80,17 @@ public class EnvironmnetController {
 	public String morePictures() {
 		return "morePictures";
 	}
-	@RequestMapping("/contribute")
-	public String contribute() {
-		return "contribute";
+	
+	
+	@RequestMapping("/management")
+	public String management() {
+		return "management";
 	}
-	@RequestMapping("/contact")
-	public String contact() {
-		return "contact";
+	@RequestMapping("/organization")
+	public String organization() {
+		return "organization";
 	}
-	@RequestMapping("/seemanager")
-	public String seemanager() {
-		return "seemanager";
-	}
-	@RequestMapping("/signin")
-	public String signin() {
-		return "signin";
-	}
-	@RequestMapping("/signup")
-	public String signup() {
-		return "signup";
-	}
+	
 	
 	
 	

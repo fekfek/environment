@@ -17,6 +17,7 @@
 <body>
 	<jsp:include page="../views/fragments/homeNavbar.jsp" />
 
+	<br>
 	<div align="center">
 		<span class="badge"><h3>Please Enter Email and Password</h3></span>
 	</div>
@@ -27,13 +28,6 @@
 		<spring:url value="/verify" var="verify" />
 
 		<form:form class="form-horizontal"  action="${verify}" method="post">
-		
-			<div class="form-group">
-				<label class="col-sm-2 control-label">Name</label>
-				<div class="col-sm-4">
-				<input type="text" class="form-control" id="name" name="name">
-				</div>
-			</div>
 
 			<div class="form-group">
 				<label class="col-sm-2 control-label">Email</label>

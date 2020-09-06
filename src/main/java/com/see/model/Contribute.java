@@ -9,17 +9,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Getter @Setter
-public class Volunteer {
+@Setter @Getter
+public class Contribute {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int Id;
-	private String vname;
-	private String gender;
-	private String email;
-	private String city;
-	private String remark;
-	
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String name;
+	private String emailPhone;
+	private String opinion;
 
 }

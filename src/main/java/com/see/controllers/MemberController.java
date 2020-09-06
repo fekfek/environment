@@ -25,26 +25,21 @@ public class MemberController {
 	@Autowired
 	private MemberService service;
 	
-	@GetMapping("/membership")
-	public String membership() {
-		return "membership";
-	}
-	
-	@GetMapping("/newMember")
+	@GetMapping("/signup")
 		public String newMember(Model model) {
 			Member member = new Member();
 			model.addAttribute("newMember", member);
-			return "newMember";
+			return "signup";
 		}
 	
 	@PostMapping("/registerMember")
 	public String registered(@Validated Member member, BindingResult result) {
 		if(result.hasErrors()) {
-			return "redirect:/newMember";
+			return "redirect:/signup";
 		}
 		else {
 			service.addMember(member);
-			return "redirect:/showMembers";
+			return "memberRegistered";
 		}
 		
 	}

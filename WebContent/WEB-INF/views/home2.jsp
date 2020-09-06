@@ -69,7 +69,7 @@
 				
 				<h3 align="center">Picture Gallery</h3>
 
-				<jsp:include page="../views/fragments/myCarousel.jsp" />	<!-- carousel imported 
+				<jsp:include page="../views/fragments/homeCarousel.jsp" />	<!-- carousel imported 
 																			from external source -->
 				
 				<div style="height:5px"></div>

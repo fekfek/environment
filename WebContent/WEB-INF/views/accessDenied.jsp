@@ -12,7 +12,7 @@
 <body>
 	<div class="container-fluid">
 	
-	<jsp:include page="../views/fragments/navbar.jsp" />
+	<jsp:include page="../views/fragments/mgmtNavbar.jsp" />
 	<br><br><br>
 	
 	<div class="container">

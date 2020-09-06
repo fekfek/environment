@@ -10,9 +10,9 @@
 <title>Manager</title>
 </head>
 <body>
+		
+	<jsp:include page="../views/fragments/mgmtNavbar.jsp" /> 
 	
-	
-	<jsp:include page="../views/fragments/homeNavbar.jsp" /> 
 	<div class="container">
 	<br><br><br>
 		<h1>This page is strictly for Managers. Please login using your manager credential</h1>

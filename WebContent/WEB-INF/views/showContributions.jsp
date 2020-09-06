@@ -7,16 +7,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>List of Volunteers</title>
+		<title>List of Contributions</title>
 	</head>
 	
 	<link rel='stylesheet' href='webjars/bootstrap/3.3.7/css/bootstrap.min.css'>
+	<script type="text/javascript" src="environment/WebContent/resources/deleteConfirm.js"></script>
 
 <body>
-<jsp:include page="../views/fragments/navbar.jsp" />
+<jsp:include page="../views/fragments/mgmtNavbar.jsp" />
 
 <jsp:include page="../views/fragments/confirmDelete.jsp" />
-
 
 
     <div class="container">
@@ -32,7 +32,7 @@
             </div>
         </c:if>
         <div align="center">
-            <span   class="badge"> <h1> List of Volunteers </h1> </span> 
+            <span   class="badge"> <h1> OPINIONS/ FEEDBACKS/ SUGGESTIONS/ COMMENTS Made</h1> </span> 
         </div>
         <br>
 
@@ -41,36 +41,30 @@
                 <tr>
                     <!-- <th>#ID</th> -->
                     <th>Id</th>
-                    <th>Volunteer Name</th>
-                    <th>Gender</th>
-                    <th>Email</th>
-                    <th>City</th>
-                    <th>Remark</th>
+                    <th>Name</th>
+                    <th>Email/Phone</th>
+                    <th>Opinion</th>
                     <th>Action</th>                  
                 </tr>
             </thead>
 
-             <c:forEach var="volunteer" items="${myVolunteers}">	
+             <c:forEach var="contributions" items="${contributions}">	
 
                 <tr>
-                    <td>${volunteer.id}</td>
-                    <td>${volunteer.vname}</td>
-                    <td>${volunteer.gender}</td>
-                    <td>${volunteer.email}</td>
-                    <td>${volunteer.city}</td>
-                    <td>${volunteer.remark}</td>
+                    <td>${contributions.id}</td>
+                    <td>${contributions.name}</td>
+                    <td>${contributions.emailPhone}</td>
+                    <td>${contributions.opinion}</td>
                     <td>
-                    	<spring:url value="/volunteer/${volunteer.id}" var="applicantUrl" />
-                        <spring:url value="/volunteer/${volunteer.id}/delete" var="deleteUrl" />
-                        <spring:url value="/volunteer/${volunteer.id}/update" var="updateUrl" />
-                        <spring:url value="/volunteer/${volunteer.id}/remark" var="remarkUrl" />
+                        <spring:url value="${contributions.id}/update" var="updateUrl" />
+						<spring:url value="${contributions.id}/delete" var="deleteUrl" />
+                        <spring:url value="${contributions.id}/remark" var="remarkUrl" />
                         <button class="btn btn-primary"
                             onclick="location.href='${updateUrl}'" >Update</button>
                         <button class="btn btn-danger"
-                            onclick="location.href='${deleteUrl}'" data-toggle="modal" data-target="#mymodal" >
-                            	<span class="glyphicon glyphicon-trash"></span> Delete</button>
-                        <button class="btn btn-info"
-                            onclick="#" >Remark</button> 
+                            onclick="location.href='${deleteUrl}'"  >
+                            	<span class="glyphicon glyphicon-trash"></span> Delete</button> 
+    <!--   insert this after onclick= 	data-toggle="modal" data-target="#mymodal" -->
                     </td>
                 </tr>
            </c:forEach>		
@@ -79,10 +73,10 @@
         
         	
         
-       <spring:url value="/newVolunteer" var="newVolunteer" /> 
+       <spring:url value="/signup" var="signup" /> 
                 
-       <button class="btn btn-primary  btn-lg btn-block"
-                            onclick="location.href='${newVolunteer}'" >New Volunteer</button> 
+<!--        <button class="btn btn-primary  btn-lg btn-block" -->
+<%--                             onclick="location.href='${signup}'" >Add New Member</button>  --%>
                             
       
       

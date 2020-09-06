@@ -74,21 +74,22 @@ input[type=submit]:hover {
 	</p>
 <div class="col-md-8">
 
-<h4 align="center">Please contribute your professional opinions here</h4>
-  <form action="action_page.php">
+<h4 align="center">Please contribute your OPINIONS here</h4>
 
-    <label for="fname">Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="your name..">
+  <form action="registerContribution" , method="post">
 
-    <label for="lname">Email and/or Phone</label>
-    <input type="text" id="lname" name="lastname" placeholder="your email / phone..">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="your name ..">
+
+    <label for="emailPhone">Email and/or Phone</label>
+    <input type="text" id="emailPhone" name="emailPhone" placeholder="your email / phone..">
 
 
-    <label for="comment">Comment</label>
-    <textarea id="comment" name="comment" placeholder="your comments.." style="height:150px">
+    <label for="opinion">Opinions</label>
+    <textarea id="opinion" name="opinion" placeholder="your opinions" style="height:150px">
     </textarea>
-
-    <input type="submit" value="Submit">
+	
+    <input type="submit" value="Submit Opinion">
 
   </form>
   </div>
