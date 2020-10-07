@@ -24,9 +24,6 @@
 	<jsp:include page="../views/fragments/homeNavbar.jsp" />
 
 	<div class="container-fluid" >
-<!-- 	<div class="container" > leaves spaces on the sides -->
-	
-	<div style="height:5px"></div> <!-- leaves a small horizontal space above nav bar -->
 	
 		<div class="row">		<!-- First Row in container -->
 			

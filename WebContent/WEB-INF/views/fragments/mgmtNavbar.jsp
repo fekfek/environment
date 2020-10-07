@@ -2,7 +2,7 @@
 
 <div style="height:10px"></div> 	<!-- leaves a small horizontal space above nav bar -->
 
- <nav class="navbar-inverse">	
+ <nav class="navbar-inverse" style="background-color:green">	
     <div class="container-fluid">
     
     	<div class="navbar-header">	

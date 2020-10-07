@@ -1,8 +1,10 @@
-<!-- <nav class="navbar navbar-dark bg-dark">	 -->
 
 <div style="height:10px"></div> 	<!-- leaves a small horizontal space above nav bar -->
 
- <nav class="navbar-inverse">	
+<!--  <nav class="navbar navbar-dark bg-success"> -->
+<!--  <nav class="navbar-inverse">	 -->
+
+<nav class="navbar-inverse" style="background-color:green">
     <div class="container-fluid">
     
     	<div class="navbar-header">	
@@ -32,7 +34,7 @@
           </li>
           
           
-            <li role="presentation"><a href="${pageContext.request.contextPath}/organization">Organization</a></li>
+            <li ><a href="${pageContext.request.contextPath}/organization">Organization</a></li>
             <li role="presentation"><a href="${pageContext.request.contextPath}/contribute">Contribute</a></li>
 	        <li role="presentation"><a href="${pageContext.request.contextPath}/contact">Contact Us</a></li>
 <%-- 	        <li role="presentation"><a href="${pageContext.request.contextPath}/seemanager">Managers</a></li> --%>

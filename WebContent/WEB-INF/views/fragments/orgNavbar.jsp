@@ -2,10 +2,10 @@
 
 <div style="height:10px"></div> 	<!-- leaves a small horizontal space above nav bar -->
 
- <nav class="navbar-inverse">	
+ <nav class="navbar-inverse" style="background-color:green">	
     <div class="container-fluid">
     
-    	<div class="navbar-header">	
+    	<div class="navbar-header" >	
     		<a class="navbar-brand" href="${pageContext.request.contextPath}/">
 <!-- or		<a class="navbar-brand" href="/see/"> -->
 				<h1>Save the Environment Ethiopia</h1>

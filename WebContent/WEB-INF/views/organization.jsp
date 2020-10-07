@@ -23,7 +23,7 @@
 <body>
 	<jsp:include page="../views/fragments/orgNavbar.jsp" />
 
-	<div class="container" >
+	<div class="container-fluid" >
 	
 	<div style="height:5px"></div> <!-- leaves a small horizontal space above nav bar -->
 	
